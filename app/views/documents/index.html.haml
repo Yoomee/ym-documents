@@ -1,0 +1,17 @@
+.container.cms-main#cms-style-container
+  =render('content_packages/sitemap_header', header_title: 'Documents')
+  .row
+    .col-xs-12.documents
+      #document-form.documents-form
+        =render('documents/form')
+
+      .documents-list-holder
+        %table
+          %thead
+            %tr
+              %th.documents-name-column Name
+              %th.documents-link-column link
+              %th.documents-delete-column Delete
+          %tbody
+            -@documents.each do |document|
+              =render('document', document: document)

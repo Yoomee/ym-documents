@@ -1,0 +1,6 @@
+=semantic_form_for @document, url: ym_documents_engine.documents_path, remote: true do |form|
+  =form.inputs do
+    =form.input :attachment, as: :file, label: 'Select file'
+    =form.input :url, label: 'Set file name'
+  =form.actions do
+    =form.action :submit, label: 'Upload file', button_html: { class: 'btn btn-primary' }
