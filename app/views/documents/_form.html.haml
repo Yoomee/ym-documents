@@ -1,4 +1,4 @@
-=semantic_form_for @document, url: ym_documents_engine.documents_path, remote: true do |form|
+=semantic_form_for Document.new, url: ym_documents_engine.documents_path, remote: true do |form|
   =form.inputs do
     =form.input :attachment, as: :file, label: 'Select file'
     =form.input :url, label: 'Set file name'

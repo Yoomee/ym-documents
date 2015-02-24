@@ -4,7 +4,7 @@ module YmDocuments::Document
     base.send(:file_accessor, :attachment)
     base.send(:friendly_id, :slug_candidates, use: :slugged)
     base.validates :attachment, presence: true
-    base.validates :url, uniqueness: true
+    # base.validates :url, uniqueness: true, unless: Proc.new { |a| a.url.blank? }
     base.validate :file_not_in_blacklist
     base.extend(ClassMethods)
   end
@@ -21,7 +21,6 @@ module YmDocuments::Document
   def slug_candidates
     [
       :url,
-      [:url, :name_and_sequence]
     ]
   end
 

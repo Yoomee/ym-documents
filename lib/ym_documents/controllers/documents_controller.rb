@@ -20,6 +20,7 @@ module YmDocuments::DocumentsController
         @document.update(slug: nil, url: f)
       end
     end
+    logger.info @document.errors.messages
   end
 
   def destroy
