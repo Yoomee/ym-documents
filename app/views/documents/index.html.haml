@@ -1,14 +1,14 @@
-.container.cms-main#cms-style-container
+.container.page-margin-bottom
   =render('content_packages/sitemap_header', header_title: 'Documents')
   .row
-    .col-xs-12.documents
-      #document-form.documents-form
+    .col-xs-12
+      #document-form.page-margin-bottom
         =render('documents/form')
 
       .documents-list-holder
-        %table
+        %table.cms-table
           %thead
-            %tr
+            %tr.text-left
               %th.documents-name-column Name
               %th.documents-link-column link
               %th.documents-delete-column Delete

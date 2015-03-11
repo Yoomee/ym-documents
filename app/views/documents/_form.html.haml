@@ -1,6 +1,10 @@
-=semantic_form_for Document.new, url: ym_documents_engine.documents_path, remote: true do |form|
-  =form.inputs do
-    =form.input :attachment, as: :file, label: 'Select file'
-    =form.input :url, label: 'Set file name'
-  =form.actions do
-    =form.action :submit, label: 'Upload file', button_html: { class: 'btn btn-primary' }
+.row
+  .col-sm-8.col-sm-offset-2
+    .cms-form-well
+      =semantic_form_for Document.new, url: ym_documents_engine.documents_path, remote: true do |form|
+        =form.inputs do
+          =form.input :attachment, as: :file, label: 'Select file'
+          =form.input :url, label: 'Set file name'
+        =form.actions do
+          =form.action :submit, label: 'Upload file', button_html: { class: 'btn btn-success pull-right' }
+        .clearfix
