@@ -38,6 +38,12 @@ Add the following line to your application.scss
 *= require ym_documents
 ```
 
+Add the following line to your routes.rb
+
+```
+mount YmDocuments::Engine, at: "/documents"
+```
+
 ## Usage
 ym_documents uses dragonfly 0.9 as file uploader. If you are using this with ym_content, a 'Documents' tab will appear in the content admin area.
 
