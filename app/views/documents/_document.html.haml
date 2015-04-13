@@ -1,4 +1,4 @@
--doc_link = "#{request.original_url}#{document.slug}"
+-doc_link = ym_documents_engine.document_url(document)
 %tr.document-row{data: {document_id: document.id}}
   %td.documents-name-column
     =document.slug
