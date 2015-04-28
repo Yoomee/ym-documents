@@ -6,7 +6,7 @@ module YmDocuments::DocumentsController
 
   def index
     @document = ::Document.new
-    @documents = ::Document.all
+    @documents = ::Document.all.order(:slug)
   end
 
   def new
